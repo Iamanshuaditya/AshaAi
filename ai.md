@@ -99,7 +99,7 @@ The UI has been redesigned to align with the JobsForHer brand identity and to cr
      * "Job & Event Feed"
      * "Assistants"
      * "Ethics & Feedback" (replacing "Audio")
-     * "Documentation"
+ 
    - Removed "Metrics" item from the navigation
 
 ### Chat Interface Improvements

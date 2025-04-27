@@ -97,11 +97,11 @@ const data = {
           url: "#",
           icon: RiFileTextLine,
         },
-        {
-          title: "Documentation",
-          url: "#",
-          icon: RiCodeLine,
-        },
+        // {
+        //   title: "Documentation",
+        //   url: "#",
+        //   icon: RiCodeLine,
+        // },
       ],
     },
     {
