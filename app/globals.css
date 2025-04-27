@@ -1,0 +1,366 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: var(--font-geist-mono);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --typography-body: var(--font-sans);
+  --typography-headings: var(--font-sans);
+  --typography-lead: 1.6;
+  --typography-paragraph-spacing: 1.6em;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.55 0.15 145);
+  /* JobsForHer green */
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.55 0.15 145);
+  /* JobsForHer green */
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.6 0.18 300);
+  /* JobsForHer purple */
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.637 0.237 25.331);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.871 0.006 286.286);
+  --ring: oklch(0.55 0.15 145);
+  /* JobsForHer green */
+  --chart-1: oklch(0.55 0.15 145);
+  /* JobsForHer green */
+  --chart-2: oklch(0.6 0.18 300);
+  /* JobsForHer purple */
+  --chart-3: oklch(0.65 0.12 132);
+  /* Lighter green */
+  --chart-4: oklch(0.55 0.2 280);
+  /* Lighter purple */
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.871 0.006 286.286);
+  --sidebar-primary: oklch(0.55 0.15 145);
+  /* JobsForHer green */
+  --sidebar-primary-foreground: oklch(0.871 0.006 286.286);
+  --sidebar-accent: oklch(0.6 0.18 300);
+  /* JobsForHer purple */
+  --sidebar-accent-foreground: oklch(0.871 0.006 286.286);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.871 0.006 286.286);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+}
+
+.dark {
+  --background: oklch(0.21 0.006 285.885);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.65 0.15 145);
+  /* JobsForHer green - brighter for dark mode */
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.65 0.18 300);
+  /* JobsForHer purple - brighter for dark mode */
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.637 0.237 25.331);
+  --border: oklch(0.274 0.006 286.033);
+  --input: oklch(0.274 0.006 286.033);
+  --ring: oklch(0.65 0.15 145);
+  /* JobsForHer green - brighter for dark mode */
+  --chart-1: oklch(0.65 0.15 145);
+  /* JobsForHer green - brighter for dark mode */
+  --chart-2: oklch(0.65 0.18 300);
+  /* JobsForHer purple - brighter for dark mode */
+  --chart-3: oklch(0.75 0.12 132);
+  /* Lighter green */
+  --chart-4: oklch(0.7 0.2 280);
+  /* Lighter purple */
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.871 0.006 286.286);
+  --sidebar-primary: oklch(0.65 0.15 145);
+  /* JobsForHer green - brighter for dark mode */
+  --sidebar-primary-foreground: oklch(0.871 0.006 286.286);
+  --sidebar-accent: oklch(0.65 0.18 300);
+  /* JobsForHer purple - brighter for dark mode */
+  --sidebar-accent-foreground: oklch(0.871 0.006 286.286);
+  --sidebar-border: oklch(0.274 0.006 286.033);
+  --sidebar-ring: oklch(0.442 0.017 285.786);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(130, 71, 200, 0.05)' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  /* Add smoother transitions for interactive elements */
+  button,
+  a,
+  select,
+  input,
+  textarea {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+/* Animation utilities */
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Markdown Typography Styles */
+@layer components {
+  .prose {
+    @apply max-w-none text-foreground;
+  }
+
+  /* Improved heading styles */
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply font-bold text-foreground mt-6 mb-4 first:mt-0;
+  }
+
+  .prose h1 {
+    @apply text-2xl;
+  }
+
+  .prose h2 {
+    @apply text-xl;
+  }
+
+  .prose h3 {
+    @apply text-lg;
+  }
+
+  .prose h4 {
+    @apply text-base;
+  }
+
+  /* Improved list styles */
+  .prose ul,
+  .prose ol {
+    @apply my-4 pl-8;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose li {
+    @apply mb-1 pl-1;
+  }
+
+  .prose li>ul,
+  .prose li>ol {
+    @apply my-0;
+  }
+
+  /* Nested list styles */
+  .prose li>ul {
+    list-style-type: circle;
+  }
+
+  .prose li>ul>li>ul {
+    list-style-type: square;
+  }
+
+  /* Bold and Italic */
+  .prose strong {
+    @apply font-semibold text-foreground;
+  }
+
+  .prose em {
+    @apply italic;
+  }
+
+  /* Code blocks */
+  .prose code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose pre {
+    @apply bg-muted p-4 rounded-lg overflow-x-auto my-4;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0 text-sm block;
+  }
+
+  /* Links */
+  .prose a {
+    @apply text-primary underline-offset-4 hover:underline;
+  }
+
+  /* Blockquotes */
+  .prose blockquote {
+    @apply border-l-4 border-primary/30 pl-4 italic my-4;
+  }
+
+  /* Tables */
+  .prose table {
+    @apply w-full my-6 text-sm;
+  }
+
+  .prose thead {
+    @apply bg-muted/50;
+  }
+
+  .prose th {
+    @apply font-semibold p-2 text-left border border-border;
+  }
+
+  .prose td {
+    @apply p-2 border border-border;
+  }
+
+  /* Horizontal rule */
+  .prose hr {
+    @apply my-8 border-border;
+  }
+
+  /* Chat message specific styles */
+  .chat-message .prose {
+    @apply text-[15px] leading-relaxed;
+  }
+
+  .chat-message .prose> :first-child {
+    @apply mt-0;
+  }
+
+  .chat-message .prose> :last-child {
+    @apply mb-0;
+  }
+
+  /* Improved spacing for lists in chat */
+  .chat-message .prose ul,
+  .chat-message .prose ol {
+    @apply my-2 pl-6;
+  }
+
+  /* Better handling of nested content */
+  .chat-message .prose li>p {
+    @apply my-0;
+  }
+
+  .chat-message .prose li>ul,
+  .chat-message .prose li>ol {
+    @apply my-1;
+  }
+
+  /* Dark mode adjustments */
+  .dark .prose {
+    @apply text-foreground;
+  }
+
+  .dark .prose a {
+    @apply text-primary hover:text-primary/90;
+  }
+
+  .dark .prose code,
+  .dark .prose pre {
+    @apply bg-muted/50;
+  }
+
+  .dark .prose thead {
+    @apply bg-muted;
+  }
+
+  .dark .prose blockquote {
+    @apply border-primary/20 text-muted-foreground;
+  }
+}
+
+/* Adjust spacing for message content */
+.chat-message .prose {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.chat-message .prose> :first-child {
+  margin-top: 0;
+}
+
+.chat-message .prose> :last-child {
+  margin-bottom: 0;
+}
