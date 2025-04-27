@@ -1,7 +1,7 @@
 "use client";
 
 import { useIsMobile } from "@/hooks/use-mobile";
-import { RiQuillPenAiLine, RiSettingsLine } from "@remixicon/react";
+import { RiSettingsLine } from "@remixicon/react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import {

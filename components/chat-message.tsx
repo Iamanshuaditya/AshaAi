@@ -12,12 +12,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import {
-  RiCodeSSlashLine,
-  RiBookLine,
-  RiLoopRightFill,
   RiCheckLine,
   RiFlag2Line,
-  RiCheckDoubleLine,
   RiCloseLine,
 } from "@remixicon/react";
 

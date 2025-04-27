@@ -10,7 +10,7 @@ export interface Assistant {
     id: string;
     name: string;
     description: string;
-    icon: any;
+    icon: typeof RiFileTextLine;
     primaryColor: string;
     secondaryColor: string;
     capabilities: string[];
@@ -128,4 +128,4 @@ export const assistants: Assistant[] = [
             "What are the growth areas in my industry?"
         ],
     }
-]; 
+];

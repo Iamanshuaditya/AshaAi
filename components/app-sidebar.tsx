@@ -84,7 +84,7 @@ const data = {
         },
         {
           title: "Job & Event Feed",
-          url: "#",
+          url: "/job-event-feed",
           icon: RiBriefcase2Line,
         },
         {

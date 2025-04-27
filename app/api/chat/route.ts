@@ -1,11 +1,10 @@
-import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold, Content, FunctionDeclarationSchema, FunctionDeclaration, SchemaType } from "@google/generative-ai";
+import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold, Content, FunctionDeclaration, SchemaType } from "@google/generative-ai";
 import { tool } from 'ai'; // Import the tool helper
 import { z } from 'zod'; // Import Zod for schema definition
 import Exa from 'exa-js'; // Import Exa
 import { tavily } from '@tavily/core'; // Import Exa
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+
 import { assistantPrompts } from '@/lib/assistant-prompts';
 
 const MODEL_NAME = "gemini-1.5-flash"; // Or your preferred Gemini model
@@ -114,7 +113,7 @@ const jobSearchTool = tool({
                 }
             });
             console.log(`Exa Query: ${exaQuery}`);
-            // @ts-ignore
+
             const exaResponse = await exa.searchAndContents(exaQuery, {
                 numResults: 7,
                 text: { includeHtmlTags: false, maxCharacters: 500 },
