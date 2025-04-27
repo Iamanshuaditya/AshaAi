@@ -22,8 +22,7 @@ Asha AI is a virtual assistant designed for the JobsForHer platform, dedicated t
     *   [Radix UI](https://www.radix-ui.com/): Set of accessible and unstyled React components (using `@radix-ui/*` dependencies).
     *   [Lucide React](https://lucide.dev/) v0.503.0: Icons library.
 *   **Backend:**
-    *   Node.js: JavaScript runtime environment.
-    *   Next.js API Routes: Serverless functions for handling API requests.
+     *   Next.js API Routes: Serverless functions for handling API requests.
 *   **AI/NLP:**
     *   [`@google/generative-ai`](https://www.npmjs.com/package/@google/generative-ai): Google's generative AI models.
     *   [`ai`](https://www.npmjs.com/package/ai): AI library for building AI-powered applications.
@@ -57,19 +56,19 @@ Asha AI is a virtual assistant designed for the JobsForHer platform, dedicated t
 1.  Clone the repository:
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/jhalaktiwarii/AshaAi
     ```
 
 2.  Navigate to the project directory:
 
     ```bash
-    cd chat
+    cd AshaAi
     ```
 
 3.  Install dependencies:
 
     ```bash
-    npm install
+    npm install --force
     ```
 
     or
@@ -122,7 +121,4 @@ This will start the development server. Open your browser and navigate to `http:
 ## Contributing
 
 (Add information about how others can contribute to the project)
-
-## License
-
-(Add license information)
+ 
