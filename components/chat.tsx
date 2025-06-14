@@ -22,9 +22,6 @@ import {
   RiFileList3Line,
   RiUserStarLine,
   RiWomenLine,
-  RiQrScan2Line,
-  RiAlertLine,
-  RiSettings4Line,
 } from "@remixicon/react";
 import { ChatMessage } from "@/components/chat-message";
 import { useRef, useEffect, useState } from "react";
@@ -143,7 +140,7 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
     } catch (err: any) {
       console.error("Failed to fetch AI response:", err);
       setIsLoading(false);
-      setError(err.message || "Failed to get response from EatSmart.");
+      setError(err.message || "Failed to get response from Asha AI.");
       setMessages(prev => [
         ...prev,
         {
@@ -163,15 +160,15 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
   };
 
   return (
-    <ScrollArea className="flex-1 [&>div>div]:h-full w-full shadow-md md:rounded-s-[inherit] min-[1024px]:rounded-e-3xl bg-[#2D3B55]">
+    <ScrollArea className="flex-1 [&>div>div]:h-full w-full shadow-md md:rounded-s-[inherit] min-[1024px]:rounded-e-3xl bg-background">
       <div className="h-full flex flex-col px-4 md:px-6 lg:px-8">
         {/* Header */}
-        <div className="py-5 bg-[#172033] sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0 before:h-px before:bg-gradient-to-r before:from-black/[0.06] before:via-black/10 before:to-black/[0.06]">
+        <div className="py-5 bg-background sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0 before:h-px before:bg-gradient-to-r before:from-black/[0.06] before:via-black/10 before:to-black/[0.06]">
           <div className="flex items-center justify-between gap-2">
             <Breadcrumb>
               <BreadcrumbList className="sm:gap-1.5">
                 <BreadcrumbItem>
-                  <BreadcrumbPage>EatSmart Chatbot</BreadcrumbPage>
+                  <BreadcrumbPage>Asha AI by JobsForHer</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -202,35 +199,51 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
           {!chatSelected && messages.length === 0 ? (
             <div className="max-w-3xl mx-auto mt-6 flex flex-col items-center justify-center h-[calc(100%-120px)]">
               <div className="text-center mb-8">
-                <h1 className="text-2xl font-semibold mb-6">How can I help you eat smarter today?</h1>
+                <h1 className="text-2xl font-semibold mb-6">How can I help with your career journey?</h1>
                 <p className="text-muted-foreground">
-                  EatSmart helps you scan packaged foods and get personalized health insights.
+                  Asha AI is here to assist you with job discovery, career advice, and professional networking.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-xl">
                 <Button
                   variant="outline"
-                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-white"
-                  onClick={() => handleSuggestionClick("Start a new scan")}
+                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-black"
+                  onClick={() => handleSuggestionClick("Find jobs in my field")}
                 >
-                  <RiQrScan2Line className="text-primary" size={20} />
-                  <span>New Scan</span>
+                  <RiFileChartLine className="text-primary" size={20} />
+                  <span>Find jobs in my field</span>
                 </Button>
                 <Button
                   variant="outline"
-                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-white"
-                  onClick={() => handleSuggestionClick("Show my alerts")}
+                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-black"
+                  onClick={() => handleSuggestionClick("Upcoming career events")}
                 >
-                  <RiAlertLine className="text-primary" size={20} />
-                  <span>View Alerts</span>
+                  <RiCalendarEventLine className="text-primary" size={20} />
+                  <span>Upcoming career events</span>
                 </Button>
                 <Button
                   variant="outline"
-                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-white col-span-1 md:col-span-2"
-                  onClick={() => handleSuggestionClick("Open settings")}
+                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-black "
+                  onClick={() => handleSuggestionClick("Resume improvement tips")}
                 >
-                  <RiSettings4Line className="text-primary" size={20} />
-                  <span>Settings</span>
+                  <RiFileList3Line className="text-primary" size={20} />
+                  <span>Resume improvement tips</span>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-black"
+                  onClick={() => handleSuggestionClick("Mentorship opportunities")}
+                >
+                  <RiUserStarLine className="text-primary" size={20} />
+                  <span>Mentorship opportunities</span>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="flex items-center justify-start gap-2 h-14 px-4 hover:bg-background/80 hover:border-primary/50 transition-all hover:text-black col-span-1 md:col-span-2"
+                  onClick={() => handleSuggestionClick("Women in tech resources")}
+                >
+                  <RiWomenLine className="text-primary" size={20} />
+                  <span>Women in tech resources</span>
                 </Button>
               </div>
             </div>
@@ -278,7 +291,7 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
                   <img
                     className="rounded-full border border-black/[0.08] shadow-sm"
                     src="https://res.cloudinary.com/dlzlfasou/image/upload/v1741345634/user-01_i5l7tp.png"
-                    alt="EatSmart"
+                    alt="Asha AI"
                     width={40}
                     height={40}
                   />
@@ -304,7 +317,7 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
 
         {/* Footer */}
         <div className="sticky bottom-0 pt-4 md:pt-8 z-50">
-          <div className="max-w-3xl mx-auto bg-[#2D3B55] rounded-[20px] pb-4 md:pb-8">
+          <div className="max-w-3xl mx-auto bg-background rounded-[20px] pb-4 md:pb-8">
             <div className="relative rounded-[20px] border border-transparent bg-muted transition-colors focus-within:bg-muted/50 focus-within:border-input has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-50 [&:has(input:is(:disabled))_*]:pointer-events-none">
               <textarea
                 className="flex sm:min-h-[84px] w-full bg-transparent px-4 py-3 text-[15px] leading-relaxed text-foreground placeholder:text-muted-foreground/70 focus-visible:outline-none [resize:none]"
@@ -328,33 +341,33 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
                     size="sm"
                     className="rounded-full border-none hover:bg-background/80 hover:text-foreground hover:shadow-sm transition-all"
                   >
-                    <RiQrScan2Line
+                    <RiEyeLine
                       className="text-muted-foreground/70 size-4 mr-1"
                       aria-hidden="true"
                     />
-                    <span>New Scan</span>
+                    <span>View Feed</span>
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
                     className="rounded-full border-none hover:bg-background/80 hover:text-foreground hover:shadow-sm transition-all"
                   >
-                    <RiAlertLine
+                    <RiUserFollowLine
                       className="text-muted-foreground/70 size-4 mr-1"
                       aria-hidden="true"
                     />
-                    <span>View Alerts</span>
+                    <span>Signup Help</span>
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
                     className="rounded-full border-none hover:bg-background/80 hover:text-foreground hover:shadow-sm transition-all"
                   >
-                    <RiSettings4Line
+                    <RiQuestionLine
                       className="text-muted-foreground/70 size-4 mr-1"
                       aria-hidden="true"
                     />
-                    <span>Settings</span>
+                    <span>FAQs</span>
                   </Button>
                 </div>
                 {/* Right buttons */}
@@ -364,7 +377,7 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
                     onClick={handleSendMessage}
                     disabled={!inputValue.trim() || isLoading} // Disable while typing
                   >
-                    <span>Ask EatSmart</span>
+                    <span>Ask AshaAI</span>
                     <RiSendPlaneFill size={16} />
                   </Button>
                 </div>

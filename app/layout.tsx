@@ -8,12 +8,12 @@ const fontSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "EatSmart Chatbot",
-  description: "AI-powered assistant to help you make healthier food choices by scanning packaged foods and providing dietary alerts.",
-  keywords: ["nutrition", "food scanner", "diet alerts", "healthy eating", "AI assistant"],
-  authors: [{ name: "EatSmart" }],
-  creator: "EatSmart",
-  publisher: "EatSmart",
+  title: "Asha AI by JobsForHer",
+  description: "AI-powered virtual assistant for women's career growth, job discovery, and professional networking. Get personalized guidance on job listings, community events, mentorship programs, and career development resources.",
+  keywords: ["women careers", "job search", "career growth", "mentorship", "professional networking", "AI assistant", "career guidance", "women empowerment"],
+  authors: [{ name: "JobsForHer Foundation" }],
+  creator: "JobsForHer Foundation",
+  publisher: "JobsForHer Foundation",
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#ffffff",
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://eatsmart.app",
-    title: "EatSmart Chatbot",
-    description: "AI-powered assistant for healthier food choices",
-    siteName: "EatSmart",
+    url: "https://jobsforher.com",
+    title: "Asha AI by JobsForHer",
+    description: "AI-powered virtual assistant for women's career growth and professional development",
+    siteName: "JobsForHer",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EatSmart Chatbot",
-    description: "AI-powered assistant for healthier food choices",
-    creator: "@eatsmart",
+    title: "Asha AI by JobsForHer",
+    description: "AI-powered virtual assistant for women's career growth and professional development",
+    creator: "@jobsforher",
   },
 };
 
