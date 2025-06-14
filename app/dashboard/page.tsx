@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Asha AI by JobsForHer",
+  title: "EatSmart Chatbot",
 };
 
 import { AppSidebar } from "@/components/app-sidebar";

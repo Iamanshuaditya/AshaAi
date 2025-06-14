@@ -102,18 +102,20 @@ export function ChatMessage({ isUser, children }: ChatMessageProps) {
             ? "https://res.cloudinary.com/dlzlfasou/image/upload/v1741345634/user-02_mlqqqt.png"
             : "https://res.cloudinary.com/dlzlfasou/image/upload/v1741345634/user-01_i5l7tp.png"
         }
-        alt={isUser ? "User profile" : "Asha AI logo"}
+        alt={isUser ? "User profile" : "EatSmart logo"}
         width={40}
         height={40}
       />
       <div
         className={cn(
           "chat-message",
-          isUser ? "bg-muted px-4 py-3 rounded-xl" : "space-y-4"
+          isUser
+            ? "bg-[#BFDBFE] text-white px-4 py-3 rounded-xl"
+            : "bg-[#3F4E73] border border-[#4B5EAA] px-4 py-3 rounded-xl space-y-4"
         )}
       >
         <div className="flex flex-col gap-3">
-          <p className="sr-only">{isUser ? "You" : "Asha AI"} said:</p>
+          <p className="sr-only">{isUser ? "You" : "EatSmart"} said:</p>
           {React.Children.map(children, child => renderContent(child))}
         </div>
         {!isUser && (
