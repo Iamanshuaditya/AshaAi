@@ -40,7 +40,7 @@ import { Button } from "@/components/ui/button";
 const data = {
   teams: [
     {
-      name: "Asha AI by JobsForHer",
+      name: "EatSmart Chatbot",
       logo: "https://res.cloudinary.com/dlzlfasou/image/upload/v1741345635/logo-01_upxvqe.png",
     },
     {
@@ -72,7 +72,7 @@ const data = {
   ],
   navMain: [
     {
-      title: "ASHA AI",
+      title: "EatSmart",
       url: "#",
       items: [
         {
