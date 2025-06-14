@@ -1,8 +1,8 @@
- # Asha AI Chatbot
+# EatSmart Chatbot
 
 ## Overview
 
-Asha AI is a virtual assistant designed for the JobsForHer platform, dedicated to empowering women in their professional journeys. It assists users in exploring women's careers, job listings, community events, mentorship programs, and session details.
+EatSmart is an AI-powered assistant that helps users scan packaged foods and receive personalized health alerts. Originally created as a hackathon project, the chatbot now focuses on guiding users toward smarter eating choices.
 
 ## Features
 
@@ -56,13 +56,13 @@ Asha AI is a virtual assistant designed for the JobsForHer platform, dedicated t
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/jhalaktiwarii/AshaAi
+    git clone https://github.com/jhalaktiwarii/EatSmartChatbot
     ```
 
 2.  Navigate to the project directory:
 
     ```bash
-    cd AshaAi
+    cd EatSmartChatbot
     ```
 
 3.  Install dependencies:

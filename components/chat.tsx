@@ -57,8 +57,11 @@ interface ChatResponse {
 
 export default function Chat({ className, assistantId, sampleQuestions }: ChatProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [chatSelected, setChatSelected] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [chatSelected, setChatSelected] = useState(true);
+  const [messages, setMessages] = useState<Message[]>([
+    { id: 'm1', text: 'Hello! How can I help you today?', isUser: false },
+    { id: 'm2', text: 'Is this safe for diabetics?', isUser: true },
+  ]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -163,7 +166,8 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
   };
 
   return (
-    <ScrollArea className="flex-1 [&>div>div]:h-full w-full shadow-md md:rounded-s-[inherit] min-[1024px]:rounded-e-3xl bg-[#2D3B55]">
+    <ScrollArea className="w-[900px] h-[700px] rounded-3xl shadow-lg ring-1 ring-[#4B5EAA]/80 bg-[#2D3B55] overflow-hidden relative">
+      <div className="absolute bottom-2 right-2 w-[30px] h-[15px] rounded-bl-full bg-gradient-to-r from-[#3B82F6] to-[#2DD4BF] opacity-80" />
       <div className="h-full flex flex-col px-4 md:px-6 lg:px-8">
         {/* Header */}
         <div className="py-5 bg-[#172033] sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0 before:h-px before:bg-gradient-to-r before:from-black/[0.06] before:via-black/10 before:to-black/[0.06]">
@@ -198,7 +202,7 @@ export default function Chat({ className, assistantId, sampleQuestions }: ChatPr
           </div>
         </div>
         {/* Chat */}
-        <div className="relative grow">
+        <div className="relative grow overflow-y-auto bg-[#3F4E73] scrollbar-blue">
           {!chatSelected && messages.length === 0 ? (
             <div className="max-w-3xl mx-auto mt-6 flex flex-col items-center justify-center h-[calc(100%-120px)]">
               <div className="text-center mb-8">
